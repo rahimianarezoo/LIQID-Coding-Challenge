@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900" />
     <link rel="stylesheet" href="assets/styles/reset.css" />
     <link rel="stylesheet" href="assets/styles/style.css" />
-
+    
+    <script type="text/javascript" src="assets/scripts/utils/sort.js"></script>
+    <script type="text/javascript" src="assets/scripts/loadProductList.js"></script>
+    <script type="text/javascript" src="data.js"></script> 
     <title>LIQID Investments - Homepage</title>
 </head>
 <body>
@@ -79,39 +81,23 @@
             </h2>
             <div class="sort-wrapper">
                 <label class="sort-wrapper__label">Sort:</label>
-                <div class="sort-wrapper__button">Highest values first</div>
-                <div class="sort-wrapper__button sort-wrapper__button--down-arrow">Highest values last</div>
+                <button onclick="handleClick('desc')" class="sort-wrapper__button">Highest values first</button>
+                <button onclick="handleClick('asc')" class="sort-wrapper__button sort-wrapper__button--down-arrow">Highest values last</button>
             </div>
-            <ul class="product-list">
-                <li class="product-list__item">
-                    <h4 class="product-list__item__title">LIQID Wealth</h4>
-                    <div class="product-list__item__badget">
-                        500.000 €
-                        <span class="product-list__item__badget__percent">
-                            25%
-                        </span>
-                    </div>
-                    <a href="#" class="product-list__item__link">
-                        Explore
-                    </a>
-                </li>
-                <li class="product-list__item">
-                    <h4 class="product-list__item__title">LIQID Wealth</h4>
-                    <div class="product-list__item__badget product-list__item__badget--red">
-                        500.000 €
-                        <span class="product-list__item__badget__percent">
-                            25%
-                        </span>
-                    </div>
-                    <a href="#" class="product-list__item__link">
-                        Explore
-                    </a>
-                </li>
+            <ul class="product-list" id="product-list-wrapper">
             </ul>
         </div>
     </section>
     <footer class="footer">
         <img src="assets/images/liqid_logo_icon.svg" alt="Liqid logo" class="footer__logo" />
     </footer>
+
+    <script type="text/javascript">
+        loadProductList(productList, 'product-list-wrapper');
+
+        function handleClick(sortType) {
+            loadProductList(sortList(productList, 'amount', sortType), 'product-list-wrapper');
+        }
+    </script>
 </body>
 </html>
