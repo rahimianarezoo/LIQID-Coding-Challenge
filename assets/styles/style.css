@@ -86,24 +86,13 @@ body {
     flex: 1 0 50%;
     padding: 0 5.20% 0 5.36%;
 }
-.banner__news {
-    display: flex;
-    flex: 1 0 50%;
-}
-.banner__news__item {
-    background-color: #F0F0F3;
-    width: 330px;
-    height: 330px;
-    padding: 33px 35px 38px 35px;
-}
-.banner__news__item:first-child {
-    margin-right: 2.08%; /* 40px in 1920px resolution */
-}
-
 .banner__text__header {
-    margin-top: 230px;
+    margin: 230px 0 27px 0;
     font-size: 35px;
     display: flex;
+    font-style: italic;
+    font-weight: 300;
+    align-items: center;
 }
 .banner__text__header:before {
     content: '';
@@ -113,6 +102,39 @@ body {
     display: inline-block;
     margin-right: 20px;
 }
+.banner__text__content,
+.banner__news__item__content {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.banner__news {
+    display: flex;
+    flex: 1 0 50%;
+    justify-content: center;
+    align-items: center;
+}
+.banner__news__item {
+    background-color: #F0F0F3;
+    width: 330px;
+    height: 330px;
+    padding: 33px 35px 38px 35px;
+}
+.banner__news__item:first-child {
+    margin-right: 4.16%; /* 40px of 960px container in 1920 resolution */
+    border-radius: 0px 0px 0px 24px;
+}
+.banner__news__item__header {
+    margin-bottom: 34px;
+    color: #EF233C;
+    height: 33px;
+    display: flex;
+    font-weight: 300;
+    font-size: 25px;
+    align-items: center;
+    font-style: italic;
+}
 .banner__news__item__header:before {
     content: '';
     width: 2px;
@@ -121,11 +143,33 @@ body {
     display: inline-block;
     margin-right: 20px;
 }
-.banner__news__item__header {
-    margin-top: 33px;
-    color: #EF233C;
-    height: 33px;
+.banner__news__item__link {
+    background-color: #EF233C;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 15px 48px 14px 48px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0px 0px 0px 12px;
+    margin-top: 73px;
+}
+.banner__news__item__link:after {
+    content: '';
+    background-repeat: no-repeat;
+    background-image: url('../images/arrow_icon.svg');
+    width: 10px;
+    height: 14.22px;
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-left: 13px;
+    transition: transform 0.15s ease-in-out;
+}
+.banner__news__item__link:hover:after {
+    transform: translateX(4px) rotate(90deg);
 }
 /**** Products ****/
 .product-wrapper {
