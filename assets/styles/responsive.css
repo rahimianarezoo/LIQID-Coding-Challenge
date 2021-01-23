@@ -12,6 +12,9 @@
         width: calc(100% - 80px);
         height: auto;
     }
+    .product-wrapper {
+        padding: 60px 40px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -21,9 +24,6 @@
     }
     .banner__text__header:before {
         height: 36px;
-    }
-    .product-wrapper {
-        padding: 60px 40px;
     }
     .products__header {
         margin-bottom: 30px;

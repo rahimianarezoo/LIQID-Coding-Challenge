@@ -84,6 +84,13 @@ body {
     background-image: url('../images/settings_icon.svg');
 }
 
+.menu__list-item__link--active {
+    color: #EF233C;
+}
+.menu__list-item__link--active .menu__list-item__link__icon--home {
+    background-image: url('../images/home_icon.svg');
+}
+
 .nav--mobile-view {
     display: block;
     background-color: #EF233C;

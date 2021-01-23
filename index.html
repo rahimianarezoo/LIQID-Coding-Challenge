@@ -33,7 +33,7 @@
                     </a>
                 </li>
                 <li class="menu__list-item">
-                    <a href="#" class="menu__list-item__link">
+                    <a href="#" class="menu__list-item__link menu__list-item__link--active">
                         <figure class="menu__list-item__link__icon menu__list-item__link__icon--home"></figure>
                         Home
                     </a>
@@ -111,6 +111,7 @@
                 menu.classList.remove(className);
             } else {
                 menu.classList.add(className);
+                document.getElementsByClassName('menu__list-item__link--active')[0].classList.remove('menu__list-item__link--active')
             }
         }
     </script>
