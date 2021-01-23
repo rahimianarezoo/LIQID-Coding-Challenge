@@ -55,6 +55,20 @@
 }
 
 @media screen and (max-width: 425px) {
+    .logo__link__text {
+        border: 0;
+        margin-right: 0;
+        padding-right: 0;
+    }
+    .menu-button {
+        display: block;
+    }
+    .menu-items {
+        display: none;
+    }
+    .nav--mobile-view .menu-items {
+        display: flex;
+    }
     .banner__text__header:before {
         height: 70px;
     }

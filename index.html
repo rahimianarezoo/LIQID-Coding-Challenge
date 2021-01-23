@@ -16,13 +16,15 @@
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
+        <nav class="nav" id="main-menu">
             <div class="logo">
                 <a href="#" class="logo__link">
+                    <img src="assets/images/q_logo_icon.svg" alt="Liqid Icon" class="logo__link__icon logo__link__icon--white" />
+                    <img src="assets/images/q_red_logo_icon.svg" alt="Liqid Icon" class="logo__link__icon logo__link__icon--red" />
                     <span class="logo__link__text">Hallo, LIQID!</span>
-                    <figure class="logo__link__icon"></figure>
                 </a>
             </div>
+            <div class="menu-button" onclick="handleToggleMenu()"></div>
             <ul class="menu-items">
                 <li class="menu__list-item">
                     <a href="#" class="menu__list-item__link">
@@ -99,6 +101,17 @@
 
         function handleClick(sortType) {
             loadProductList(sortList(productList, 'amount', sortType), 'product-list-wrapper');
+        }
+
+        function handleToggleMenu() {
+            const menu = document.getElementById('main-menu');
+            const className = 'nav--mobile-view';
+
+            if (menu.classList.contains(className)) {
+                menu.classList.remove(className);
+            } else {
+                menu.classList.add(className);
+            }
         }
     </script>
 </body>
