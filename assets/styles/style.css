@@ -78,16 +78,15 @@ body {
 /**** Banner ****/
 .banner {
     display: flex;
-    height: 650px;
 }
 .banner__text {
     background-color: #0D455D;
     color: #FFFFFF;
     flex: 1 0 50%;
-    padding: 0 5.20% 0 5.36%;
+    padding: 230px 5.20% 230px 5.36%;
 }
 .banner__text__header {
-    margin: 230px 0 27px 0;
+    margin-bottom: 27px;
     font-size: 35px;
     display: flex;
     font-style: italic;
@@ -171,6 +170,7 @@ body {
 .banner__news__item__link:hover:after {
     transform: translateX(4px) rotate(90deg);
 }
+
 /**** Products ****/
 .product-wrapper {
     background-color: #F0F0F3;
@@ -215,7 +215,7 @@ body {
     background-color: #B9B9B9;
     color: #FFFFFF;
     font-size: 14px;
-    padding: 4px 16px;
+    padding: 6px 16px;
     border-radius: 2px;
     cursor: pointer;
     border: none;

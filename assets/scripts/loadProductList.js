@@ -28,6 +28,8 @@ function loadProductList(productList, wrapperId) {
             div.innerHTML = product.amount;
             div.appendChild(span);
             a.innerHTML = 'Explore';
+            // The source of the link will be filled here in the real project.
+            a.href = '#';
 
             li.appendChild(h4);
             li.appendChild(div);
