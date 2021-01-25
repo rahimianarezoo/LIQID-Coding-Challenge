@@ -100,7 +100,8 @@
         loadProductList(productList, 'product-list-wrapper');
 
         function handleClick(sortType) {
-            loadProductList(sortList(productList, 'amount', sortType), 'product-list-wrapper');
+            const sortedList = sortList(productList, 'amount', sortType);
+            loadProductList(sortedList, 'product-list-wrapper');
         }
 
         function handleToggleMenu() {

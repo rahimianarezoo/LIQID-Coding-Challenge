@@ -37,6 +37,6 @@ function loadProductList(productList, wrapperId) {
             listContainer.appendChild(li);   
         });
     } else {
-        throw `${wrapperId} is not defined`
+        throw `${wrapperId} is not defined`;
     }
 }
